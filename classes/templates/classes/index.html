@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    {%load custom_filters %}
+  </head>
+  <body>
+    <h1>{{"Classes"|multiply:3}}</h1>
+    <h2>{{title|lower}}</h2>
+    <p>{{description|default:" this is the default"}}</p>
+    {% if messages %}
+    <ul>
+      {% for message in messages %}
+      <li>{{message}}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </body>
+</html>
