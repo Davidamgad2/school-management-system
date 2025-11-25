@@ -10,6 +10,7 @@ def home(request, david):
         print(request.body)
         return HttpResponse(f"Hello {david} POST")
     else:
+        request.x = "david"
         return HttpResponse(f"Hello {david}")
 
 

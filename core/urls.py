@@ -23,4 +23,6 @@ API_VERSION_prefice = "api/v1"
 urlpatterns = [
     path("admin/", admin.site.urls),
     path(f"{API_VERSION_prefice}/", include("classes.urls")),
+    path(f"{API_VERSION_prefice}/users/", include("accounts.urls")),
+    path(f"{API_VERSION_prefice}/schools/", include("school.urls"))
 ]

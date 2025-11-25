@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from .tasks import send_welcome_email
+from django.http import HttpResponse
 
-# Create your views here.
+
+def send_email(request):
+    send_welcome_email.delay(1)
+    return HttpResponse("Email sent")
